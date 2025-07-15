@@ -44,7 +44,7 @@ const RoomBody = (): ReactElement => {
 	if (!chat) {
 		throw new Error('No ChatContext provided');
 	}
-
+	console.log("Ok Im Here")
 	const t = useTranslation();
 	const isLayoutEmbedded = useEmbeddedLayout();
 	const room = useRoom();

@@ -3,7 +3,7 @@ import { GenericMenu, type GenericMenuItemProps } from '@rocket.chat/ui-client';
 import { useLayoutHiddenActions } from '@rocket.chat/ui-contexts';
 import { useId } from 'react';
 import { useTranslation } from 'react-i18next';
-
+// I need this page as all of them are the actions 
 import { useCopyAction } from './useCopyAction';
 import { useDeleteMessageAction } from './useDeleteMessageAction';
 import { useEditMessageAction } from './useEditMessageAction';
@@ -15,6 +15,7 @@ import { usePermalinkAction } from './usePermalinkAction';
 import { usePinMessageAction } from './usePinMessageAction';
 import { useReadReceiptsDetailsAction } from './useReadReceiptsDetailsAction';
 import { useReplyInDMAction } from './useReplyInDMAction';
+import { useReplyInChat } from './useReplyInChat';
 import { useReportMessageAction } from './useReportMessageAction';
 import { useShowMessageReactionsAction } from './useShowMessageReactionsAction';
 import { useStarMessageAction } from './useStarMessageAction';
@@ -64,6 +65,7 @@ const MessageToolbarActionMenu = ({ message, context, room, subscription, onChan
 		useTranslateAction(message, { room, subscription }),
 		useViewOriginalTranslationAction(message, { room, subscription }),
 		useReplyInDMAction(message, { room, subscription }),
+		useReplyInChat(message, { room, subscription }),
 		useCopyAction(message, { subscription }),
 		useEditMessageAction(message, { room, subscription }),
 		useDeleteMessageAction(message, { room, subscription }),

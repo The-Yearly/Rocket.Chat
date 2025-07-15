@@ -92,7 +92,7 @@ class RoomCoordinatorClient extends RoomCoordinator {
 		} else {
 			return;
 		}
-
+		console.log(config.route.path)
 		router.navigate(
 			{
 				pattern: config.route.path ?? '/home',

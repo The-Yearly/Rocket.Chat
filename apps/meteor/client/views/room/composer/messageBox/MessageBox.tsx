@@ -1,4 +1,5 @@
 /* eslint-disable complexity */
+//this is the message box page and i need it
 import type { IMessage, ISubscription } from '@rocket.chat/core-typings';
 import { useContentBoxSize, useEffectEvent } from '@rocket.chat/fuselage-hooks';
 import { useSafeRefCallback } from '@rocket.chat/ui-client';
@@ -207,7 +208,7 @@ const MessageBox = ({
 		if (chat.composer && handleFormattingShortcut(event, [...formattingButtons], chat.composer)) {
 			return;
 		}
-
+		
 		if (event.shiftKey || event.ctrlKey || event.metaKey) {
 			return;
 		}
