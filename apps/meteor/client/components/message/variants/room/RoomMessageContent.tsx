@@ -48,7 +48,6 @@ const RoomMessageContent = ({ message, unread, all, mention, searchText }: RoomM
 	const quotes = normalizedMessage?.attachments?.filter(isQuoteAttachment) || [];
 
 	const attachments = normalizedMessage?.attachments?.filter((attachment) => !isQuoteAttachment(attachment)) || [];
-
 	return (
 		<>
 			{isMessageEncrypted && <MessageBody data-qa-type='message-body'>{t('E2E_message_encrypted_placeholder')}</MessageBody>}
